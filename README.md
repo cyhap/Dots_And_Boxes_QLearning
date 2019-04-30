@@ -1,10 +1,10 @@
-# Dots_And_Boxes_QLearning
+## Dots_And_Boxes_QLearning
 Implementing a Q_Learning agent to play Dots and Boxes. Evaluating the performance of Q-Tables compared to Functional Approximations of the Q Table
 
 The following is a brief description of how to use the scripts contained in this repository.
 
-## Scripts
-# QTable_vs_Approx_Test.py
+# Scripts
+## QTable_vs_Approx_Test.py
   This script compares the performance of a Q Learning agent using a functional approximation playing against an agent using a Q-Table.
   There are two configurable switches within the script: tDrawNow and boardSize. tDrawNow controls whether or not a visualization of
   the game is provided along with a score printed to output. The board size is self explanitory. Nothing else should need to be
@@ -15,17 +15,17 @@ The following is a brief description of how to use the scripts contained in this
   Run the script by typing the following in the terminal:
     python3 QTable_vs_Approx_Test.py
     
-# QvQ_Training.py
+## QvQ_Training.py
   This script uses two Q learning agents to play against one another using the same Q-Table or functional approximation model. The
   following are configurable switches within the script:
-    numEpisodes = 10000  # Number of Games Played
-    tDrawNow = False # Display Game and Print Game scores while they are played
-    boardSize = 3 # Control the gameboard size
-    useFcnApprox = True #Use this control whether the Q Agents are usinga functional approximation or a Q Table
-    numGamesPerUpdate = 1000 # How often training is paused to sample performance against a random player.
-    numGamesPerRetrain = 10000 # How often the functional approximation is retrained given data learned while playing.
-    epsilon = .1 # How often the Q-Agents will explore "non-optimal" moves
-    MasterQTable = {} # This means that the Q-Agents will start from scratch in their learning. Placing a tCompDict will allow
+    - numEpisodes = 10000  # Number of Games Played
+    - tDrawNow = False # Display Game and Print Game scores while they are played
+    - boardSize = 3 # Control the gameboard size
+    - useFcnApprox = True #Use this control whether the Q Agents are usinga functional approximation or a Q Table
+    - numGamesPerUpdate = 1000 # How often training is paused to sample performance against a random player.
+    - numGamesPerRetrain = 10000 # How often the functional approximation is retrained given data learned while playing.
+    - epsilon = .1 # How often the Q-Agents will explore "non-optimal" moves
+    - MasterQTable = {} # This means that the Q-Agents will start from scratch in their learning. Placing a tCompDict will allow
                       # the the Q agents to be seeded or non-empty.
   In order to run this script with useFcnApprox set to True the correct model must be saved in "QComp_Table_Seeded.h5" Similarly to the
   instructions provided above. 
@@ -36,7 +36,7 @@ The following is a brief description of how to use the scripts contained in this
   Run the script by typing the following in the terminal:
     python3 QvQ_Training.py
   
-# NN_Regression_Fcn_Approx.py
+## NN_Regression_Fcn_Approx.py
   This script takes a training size and boardsize and creates a NN Functional approximation for the parameters provided.
   These are the configurable parameters:
     trainingSet = 10000 # Refers to the number of games played during QvQ training. This number is used to load the Q Table that will be
@@ -48,7 +48,7 @@ The following is a brief description of how to use the scripts contained in this
   Run the script by typing the following in the terminal:
     python3 NN_Regression_Fcn_Approx.py
     
-# Dots_Game_Driver.py
+## Dots_Game_Driver.py
   This script allows a Human to play against a Q agent. The configurable switches are as follows:
     tDrawNow = False # Display Game and Print Game scores while they are played
     useFcnApprox = True #Use this control whether the Q Agents are usinga functional approximation or a Q Table
@@ -61,7 +61,7 @@ The following is a brief description of how to use the scripts contained in this
   Run the script by typing the following in the terminal:
     python3 NN_Regression_Fcn_Approx.py
     
-# Conv2x2To3x3.py
+## Conv2x2To3x3.py
   This script takes a 2x2 Q-Table and changes it into a format that will be useable for a Q-Agent learning on a 3x3 board. 
   This scripts requires that the Dictionary corresponding to the configurable parameters is present in the directory.
   Configurable parameters include:
@@ -72,12 +72,12 @@ The following is a brief description of how to use the scripts contained in this
   Run the script by typing the following in the terminal:
     python3 Conv2x2To3x3.py
     
-# State_Reduction_Script.py
+## State_Reduction_Script.py
   This script takes a given board size and computes all possible states and actions possible for that board. It then saves that result
   to StateSet2x2.py. (I eventually learned that there was a much more efficient way to save variables but this was for early on
   exploratory measures.
 
-## Supporting Source Code
+# Supporting Source Code
 Q_Learning_Comp_Alt.py # Contains functions for the Q-Learning Agent to operate properly
 Dots_RandMove_Comp.py # Contains functions to generate legal random moves
 Dots.py # Contains the instructions of how to build a game and generate rewards.
