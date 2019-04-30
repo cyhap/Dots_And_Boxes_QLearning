@@ -13,6 +13,7 @@ The following is a brief description of how to use the scripts contained in this
   set within the script. For exmaple, When boardSize = 2. Overwrite "QComp_Table_Seeded.h5" with a copy of "QComp_Table_Seeded2x2.h5".
   Running the script will play 1000 games and output the performance of each agent in a plot. Close the plot to terminate the script.
   Run the script by typing the following in the terminal:
+  
     python3 QTable_vs_Approx_Test.py
     
 ## QvQ_Training.py
@@ -36,6 +37,7 @@ The following is a brief description of how to use the scripts contained in this
   Note a copy of a 2x2 functional approximation and a 3x3 functional approximation are provided in  this repository. Upon completion 
   the script will generate a plot of its performance while training. Close this plot to terminate the script.
   Run the script by typing the following in the terminal:
+  
     python3 QvQ_Training.py
   
 ## NN_Regression_Fcn_Approx.py
@@ -50,6 +52,7 @@ The following is a brief description of how to use the scripts contained in this
   This file also acts as a helper providing some functions to extract data from a Q-Table to convert them for training. As well as a
   function to convert state action pairs into a format suitable for the model to make a prediction.
   Run the script by typing the following in the terminal:
+  
     python3 NN_Regression_Fcn_Approx.py
     
 ## Dots_Game_Driver.py
@@ -65,6 +68,7 @@ The following is a brief description of how to use the scripts contained in this
   when using a Functional approximation or training set the proper files must be available in the directory to properly load the
   Q-agent. Disclaimer that the performance improved against random moves is not guaranteed performance against human players.
   Run the script by typing the following in the terminal:
+  
     python3 NN_Regression_Fcn_Approx.py
     
 ## Conv2x2To3x3.py
@@ -78,6 +82,7 @@ The following is a brief description of how to use the scripts contained in this
                         # data.
                         
   Run the script by typing the following in the terminal:
+  
     python3 Conv2x2To3x3.py
     
 ## State_Reduction_Script.py
