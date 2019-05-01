@@ -50,7 +50,7 @@ class Q_Learning_Comp:
             #Update Model using the dictionary that has been built up
             #input("I think its working?")
             (inp, labels) = NN_Regression_Fcn_Approx.getDataFromQTable(self.QTable, self.boardSize)
-            self.model.fit(inp, labels, epochs = 600, batch_size=len(self.QTable), verbose = 0)
+            self.model.fit(inp, labels, epochs = 200, batch_size=len(self.QTable), verbose = 0)
             #600 for 2x2
             #200 for 3x3
             
