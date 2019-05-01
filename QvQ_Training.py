@@ -33,9 +33,9 @@ if __name__ == "__main__":
     numEpisodes = 10000
     tDrawNow = False
     boardSize = 2
-    useFcnApprox = True
-    numGamesPerUpdate = 250
-    numGamesPerRetrain = 250
+    useFcnApprox = False
+    numGamesPerUpdate = 100
+    numGamesPerRetrain = 10000
     playerTypes2Use = [Dots.PlayerType.QLearning, Dots.PlayerType.QLearning]
     #Initialize Q Learning
     #Using Dictionary's Defualt function I can make my Q tables without all of the states ahead of time.
@@ -45,8 +45,8 @@ if __name__ == "__main__":
     #    tCompDict = pickle.load(filePtr)
     with open(f"comp{boardSize}x{boardSize}_QVals_{numEpisodes}.pkl", "rb") as filePtr: 
         tCompDict = pickle.load(filePtr)
-    MasterQTable = tCompDict
-    #MasterQTable = {} #Use this when starting from Scratch
+    #MasterQTable = tCompDict
+    MasterQTable = {} #Use this when starting from Scratch
     seed1 = 1234
     seed2 = 5678
     #Assign Player to Each Comp
