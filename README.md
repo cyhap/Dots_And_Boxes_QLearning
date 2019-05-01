@@ -96,3 +96,13 @@ Dots_RandMove_Comp.py # Contains functions to generate legal random moves
 Dots.py # Contains the instructions of how to build a game and generate rewards.
 StateSet2x2.py # Saved collection of states from State_Reduction_Script.py
 
+# Dependencies (Python)
+turtle
+numpy
+random
+enum
+pickle
+keras.models
+keras.layers
+
+
